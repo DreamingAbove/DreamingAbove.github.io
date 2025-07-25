@@ -4,170 +4,381 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support - Revealed+</title>
+    <meta name="description" content="Get help and support for Revealed+ app - Contact us for assistance">
+    <meta name="robots" content="index, follow">
+    
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        :root {
+            --primary-gradient: linear-gradient(135deg, #5DADE2 0%, #2ECC71 100%);
+            --primary-gradient-dark: linear-gradient(135deg, #3498DB 0%, #27AE60 100%);
+            --background-light: #f8f9fa;
+            --background-dark: #1a1a1a;
+            --card-bg-light: #ffffff;
+            --card-bg-dark: #2d2d2d;
+            --text-primary-light: #2c3e50;
+            --text-primary-dark: #ffffff;
+            --text-secondary-light: #6c757d;
+            --text-secondary-dark: #b0b0b0;
+            --shadow-light: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --shadow-dark: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --border-radius: 16px;
+            --border-radius-lg: 24px;
+        }
+
+        * {
             margin: 0;
-            padding: 16px;
-            font-size: 16px;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #000;
-                color: #fff;
-            }
-            a {
-                color: #0a84ff;
-            }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary-light);
+            background: var(--background-light);
+            transition: all 0.3s ease;
         }
-        
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        
-        h2 {
-            font-size: 20px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        
-        p {
-            margin-bottom: 15px;
-        }
-        
-        ul {
-            padding-left: 20px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-        }
-        
-        .contact-box {
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+
+        .header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            background: var(--primary-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            color: var(--text-secondary-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg-light);
+            border-radius: var(--border-radius-lg);
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: var(--shadow-light);
+            border: 1px solid rgba(93, 173, 226, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary-light);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            background: var(--primary-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card p {
+            color: var(--text-secondary-light);
+            margin-bottom: 16px;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(93, 173, 226, 0.1);
+        }
+
+        .card li:last-child {
+            border-bottom: none;
+        }
+
+        .card li::before {
+            content: '•';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: var(--primary-gradient);
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .card strong {
+            color: var(--text-primary-light);
+        }
+
+        .card a {
+            color: #3498DB;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .card a:hover {
+            color: #2980B9;
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(39, 174, 96, 0.1) 100%);
+            border-left: 4px solid #3498DB;
+            padding: 24px;
+            border-radius: var(--border-radius);
             margin: 20px 0;
         }
-        
-        @media (prefers-color-scheme: dark) {
-            .contact-box {
-                background-color: #1c1c1e;
-                border-color: #38383a;
-            }
+
+        .contact-box h2 {
+            color: #3498DB;
+            margin-bottom: 16px;
         }
-        
+
         .email-link {
-            color: #007AFF;
+            color: #3498DB;
             text-decoration: none;
             font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
         }
-        
-        @media (prefers-color-scheme: dark) {
-            .email-link {
-                color: #0a84ff;
-            }
+
+        .email-link:hover {
+            color: #2980B9;
         }
-        
+
+        /* FAQ Items */
         .faq-item {
             margin-bottom: 20px;
         }
-        
+
         .faq-question {
             font-weight: 600;
             margin-bottom: 8px;
+            color: var(--text-primary-light);
         }
-        
-        .last-updated {
-            font-style: italic;
-            margin-top: 30px;
-            font-size: 14px;
-            color: #666;
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-secondary-light);
+            font-size: 0.9rem;
         }
-        
+
+        /* Dark Mode */
         @media (prefers-color-scheme: dark) {
-            .last-updated {
-                color: #999;
+            body {
+                color: var(--text-primary-dark);
+                background: var(--background-dark);
+            }
+
+            .header h1 {
+                background: var(--primary-gradient-dark);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .header p {
+                color: var(--text-secondary-dark);
+            }
+
+            .card {
+                background: var(--card-bg-dark);
+                box-shadow: var(--shadow-dark);
+                border: 1px solid rgba(93, 173, 226, 0.2);
+            }
+
+            .card h2 {
+                color: var(--text-primary-dark);
+            }
+
+            .card h3 {
+                background: var(--primary-gradient-dark);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .card p {
+                color: var(--text-secondary-dark);
+            }
+
+            .card strong {
+                color: var(--text-primary-dark);
+            }
+
+            .card li {
+                border-bottom: 1px solid rgba(93, 173, 226, 0.2);
+            }
+
+            .faq-question {
+                color: var(--text-primary-dark);
+            }
+
+            .contact-box {
+                background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(39, 174, 96, 0.1) 100%);
+                border-left: 4px solid #3498DB;
+            }
+
+            .contact-box h2 {
+                color: #3498DB;
             }
         }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
+        .card:nth-child(6) { animation-delay: 0.6s; }
     </style>
 </head>
 <body>
-    <h1>Support - Revealed+</h1>
-    
-    <p>Need help with Revealed+? We're here to assist you with any questions or issues you may have.</p>
-    
-    <div class="contact-box">
-        <h2>📧 Contact Us</h2>
-        <p>For support, questions, or feedback, please email us at:</p>
-        <p><a href="mailto:support@revealedplusapp.com" class="email-link">support@revealedplusapp.com</a></p>
-        <p>We typically respond within 24 hours during business days.</p>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Support</h1>
+            <p>Need help with Revealed+? We're here to assist you with any questions or issues you may have.</p>
+        </header>
+
+        <!-- Contact Us -->
+        <div class="card">
+            <div class="contact-box">
+                <h2>📧 Contact Us</h2>
+                <p>For support, questions, or feedback, please email us at:</p>
+                <p><a href="mailto:support@revealedplusapp.com" class="email-link">support@revealedplusapp.com</a></p>
+                <p>We typically respond within 24 hours during business days.</p>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="card">
+            <h2>❓ Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I import my trip screenshots?</div>
+                <p>Use the Import tab in the app to select photos from your camera roll. The app will automatically detect and process trip screenshots from Uber, Lyft, and other ride-sharing services.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I access premium features?</div>
+                <p>Tap on any premium feature to start a 5-day free trial. After the trial, you can subscribe to continue accessing premium features like Analytics, History, and Auto Import.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can I export my trip data?</div>
+                <p>Yes! Premium users can export their trip data to CSV, Excel, or PDF formats. Go to the History tab and use the export feature.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I set earning goals?</div>
+                <p>Go to Settings → Goals to set daily, weekly, and monthly earning targets. The app will track your progress and notify you when you reach your goals.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is my data secure?</div>
+                <p>Yes! Your trip data, including locations and earnings, is stored locally on your device and is never shared with third parties. Only subscription information is shared with our payment processor.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I manage my subscription?</div>
+                <p>You can manage your subscription through your iPhone's Settings → Apple ID → Subscriptions, or contact us for assistance.</p>
+            </div>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="card">
+            <h2>🔧 Troubleshooting</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">The app isn't detecting my screenshots</div>
+                <p>Make sure you've granted photo library access to Revealed+. Go to Settings → Privacy & Security → Photos to check permissions.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">My statistics aren't updating</div>
+                <p>Try refreshing the app by pulling down on the Today or Analytics screen. If issues persist, try closing and reopening the app.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">I'm having trouble with auto-import</div>
+                <p>Auto-import requires background app refresh to be enabled. Go to Settings → General → Background App Refresh and ensure it's turned on for Revealed+.</p>
+            </div>
+        </div>
+
+        <!-- App Information -->
+        <div class="card">
+            <h2>📱 App Information</h2>
+            <ul>
+                <li><strong>Version:</strong> Latest version available on the App Store</li>
+                <li><strong>Compatibility:</strong> iOS 15.0 or later</li>
+                <li><strong>Languages:</strong> English</li>
+            </ul>
+        </div>
+
+        <!-- Legal Links -->
+        <div class="card">
+            <h2>📄 Legal</h2>
+            <p><a href="privacy_policy.html">Privacy Policy</a> | <a href="terms_of_service.html">Terms of Service</a></p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2024 Revealed+. All rights reserved.</p>
+        </footer>
     </div>
-    
-    <h2>❓ Frequently Asked Questions</h2>
-    
-    <div class="faq-item">
-        <div class="faq-question">How do I import my trip screenshots?</div>
-        <p>Use the Import tab in the app to select photos from your camera roll. The app will automatically detect and process trip screenshots from Uber, Lyft, and other ride-sharing services.</p>
-    </div>
-    
-    <div class="faq-item">
-        <div class="faq-question">How do I access premium features?</div>
-        <p>Tap on any premium feature to start a 5-day free trial. After the trial, you can subscribe to continue accessing premium features like Analytics, History, and Auto Import.</p>
-    </div>
-    
-    <div class="faq-item">
-        <div class="faq-question">Can I export my trip data?</div>
-        <p>Yes! Premium users can export their trip data to CSV, Excel, or PDF formats. Go to the History tab and use the export feature.</p>
-    </div>
-    
-    <div class="faq-item">
-        <div class="faq-question">How do I set earning goals?</div>
-        <p>Go to Settings → Goals to set daily, weekly, and monthly earning targets. The app will track your progress and notify you when you reach your goals.</p>
-    </div>
-    
-    <div class="faq-item">
-        <div class="faq-question">Is my data secure?</div>
-        <p>Yes! Your trip data, including locations and earnings, is stored locally on your device and is never shared with third parties. Only subscription information is shared with our payment processor.</p>
-    </div>
-    
-    <div class="faq-item">
-        <div class="faq-question">How do I manage my subscription?</div>
-        <p>You can manage your subscription through your iPhone's Settings → Apple ID → Subscriptions, or contact us for assistance.</p>
-    </div>
-    
-    <h2>🔧 Troubleshooting</h2>
-    
-    <div class="faq-item">
-        <div class="faq-question">The app isn't detecting my screenshots</div>
-        <p>Make sure you've granted photo library access to Revealed+. Go to Settings → Privacy & Security → Photos to check permissions.</p>
-    </div>
-    
-    <div class="faq-item">
-        <div class="faq-question">My statistics aren't updating</div>
-        <p>Try refreshing the app by pulling down on the Today or Analytics screen. If issues persist, try closing and reopening the app.</p>
-    </div>
-    
-    <div class="faq-item">
-        <div class="faq-question">I'm having trouble with auto-import</div>
-        <p>Auto-import requires background app refresh to be enabled. Go to Settings → General → Background App Refresh and ensure it's turned on for Revealed+.</p>
-    </div>
-    
-    <h2>📱 App Information</h2>
-    
-    <p><strong>Version:</strong> Latest version available on the App Store</p>
-    <p><strong>Compatibility:</strong> iOS 15.0 or later</p>
-    <p><strong>Languages:</strong> English</p>
-    
-    <h2>📄 Legal</h2>
-    
-    <p><a href="privacy_policy.html">Privacy Policy</a> | <a href="terms_of_service.html">Terms of Service</a></p>
-    
-    <div class="last-updated">Last Updated: March 15, 2025</div>
 </body>
 </html> 
