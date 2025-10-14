@@ -3,26 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TypeTalk Information</title>
+    <meta name="description" content="Information and support resources for TypeTalk and Revealed+ applications">
+    <title>My Apps Information</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: #666;
+            font-weight: 400;
+        }
+
+        /* Cards Container */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        /* Card Styles */
+        .app-card {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .app-card h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            letter-spacing: -0.3px;
+        }
+
+        .app-card ul {
+            list-style: none;
+        }
+
+        .app-card li {
+            margin-bottom: 12px;
+        }
+
+        .app-card li:last-child {
+            margin-bottom: 0;
+        }
+
+        .app-card a {
+            display: inline-block;
+            color: #007aff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s ease, transform 0.2s ease;
+            position: relative;
+        }
+
+        .app-card a:hover {
+            color: #0051d5;
+            transform: translateX(4px);
+        }
+
+        .app-card a::before {
+            content: '→';
+            margin-right: 8px;
+            opacity: 0;
+            transition: opacity 0.2s ease, margin-right 0.2s ease;
+        }
+
+        .app-card a:hover::before {
+            opacity: 1;
+            margin-right: 12px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+        }
+
+        .last-updated {
+            font-size: 0.875rem;
+            margin-bottom: 12px;
+        }
+
+        .copyright {
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .app-card {
+                padding: 24px;
+            }
+
+            .app-card h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .app-card {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Apps Information Page</h1>
-    <p>This page provides important information regarding my applications.</p>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Apps</h1>
+            <p class="subtitle">Information and support resources for our applications</p>
+        </header>
 
-    <h2>TypeTalk</h2>
-    <ul>
-        <li><a href="typetalk_privacy_policy.html">Privacy Policy</a></li>
-        <li><a href="typetalk_terms_of_service.html">Terms of Service</a></li>
-        <li><a href="typetalk_support.html">Contact Support</a></li>
-    </ul>
+        <main class="cards-container">
+            <article class="app-card">
+                <h2>TypeTalk</h2>
+                <ul>
+                    <li><a href="typetalk_privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="typetalk_terms_of_service.html">Terms of Service</a></li>
+                    <li><a href="typetalk_support.html">Contact Support</a></li>
+                </ul>
+            </article>
 
-    <h2>Other App (Placeholder Name)</h2>
-    <ul>
-        <li><a href="privacy_policy.html">Privacy Policy</a></li>
-        <li><a href="terms_of_service.html">Terms of Service</a></li>
-        <li><a href="support.html">Contact Support</a></li>
-    </ul>
+            <article class="app-card">
+                <h2>Revealed+</h2>
+                <ul>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="terms_of_service.html">Terms of Service</a></li>
+                    <li><a href="support.html">Contact Support</a></li>
+                </ul>
+            </article>
+        </main>
 
-    <p>Last updated: October 12, 2025</p>
+        <footer>
+            <p class="last-updated">Last Updated: October 12, 2025</p>
+            <p class="copyright">&copy; 2025 All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
