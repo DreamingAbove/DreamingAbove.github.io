@@ -1,0 +1,146 @@
+/* themetalk.css */
+
+:root {
+    /* Light Mode Colors */
+    --theme-background-light: #F5F7FA;
+    --theme-purple-light: #E8E3F0;
+    --theme-text-primary-light: #1A1A1F;
+    --theme-text-secondary-light: #5A5D62;
+    --theme-card-background-light: #FFFFFF;
+
+    /* Dark Mode Colors */
+    --theme-background-dark: #0D0D0F;
+    --theme-purple-dark: #1A0D2E;
+    --theme-text-primary-dark: #F9FAFB;
+    --theme-text-secondary-dark: #A0A3A8;
+    --theme-card-background-dark: #1A1A1F;
+
+    /* Accent Colors (same in both modes) */
+    --theme-primary-accent: #5AA9E6; /* soft calm blue */
+    --theme-secondary-accent: #89CFF0; /* muted sky blue */
+    --theme-emotion-tone: #E45A84; /* gentle rose-pink */
+
+    /* Font Families */
+    --font-family-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+    font-family: var(--font-family-default);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--theme-text-primary);
+    background: linear-gradient(to bottom, var(--theme-background), var(--theme-purple));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dynamic Colors based on prefers-color-scheme */
+@media (prefers-color-scheme: light) {
+    body {
+        --theme-background: var(--theme-background-light);
+        --theme-purple: var(--theme-purple-light);
+        --theme-text-primary: var(--theme-text-primary-light);
+        --theme-text-secondary: var(--theme-text-secondary-light);
+        --theme-card-background: var(--theme-card-background-light);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --theme-background: var(--theme-background-dark);
+        --theme-purple: var(--theme-purple-dark);
+        --theme-text-primary: var(--theme-text-primary-dark);
+        --theme-text-secondary: var(--theme-text-secondary-dark);
+        --theme-card-background: var(--theme-card-background-dark);
+    }
+}
+
+/* Typography Styles */
+h1 {
+    font-size: 2.5em; /* .largeTitle */
+    font-weight: bold;
+    color: var(--theme-text-primary);
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.5em; /* .title3 */
+    font-weight: 600; /* semibold */
+    color: var(--theme-text-primary);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1.17em; /* .headline, similar to h3 default */
+    font-weight: 600; /* semibold */
+    color: var(--theme-text-primary);
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+}
+
+p {
+    font-size: 1em; /* .body */
+    font-weight: normal;
+    color: var(--theme-text-primary);
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+li {
+    font-size: 1em;
+    color: var(--theme-text-primary);
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: var(--theme-primary-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+b {
+    font-weight: bold;
+    color: var(--theme-text-primary);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--theme-text-secondary);
+    margin: 2em 0;
+}
+
+/* Card-like styling for content sections */
+.container {
+    background-color: var(--theme-card-background);
+    border-radius: 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Adjusted shadow based on theme.swift */
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 800px;
+    flex-grow: 1;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.header-section h1 {
+    margin-bottom: 0.2em;
+}
+
+.header-section p {
+    color: var(--theme-text-secondary);
+    font-size: 1.1em;
+}
