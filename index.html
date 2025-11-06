@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Information and support resources for TypeTalk and Revealed+ applications">
-    <title>My Apps Information</title>
+    <meta name="description" content="Dreaming Above Labs - Turning ideas into intelligent, human-centered apps. Explore Calvin Warren's creative studio building meaningful tools that make life simpler, smarter, and more inspired.">
+    <meta name="keywords" content="Dreaming Above Labs, Calvin Warren, app developer, iOS apps, Revealed+, TypeTalk, Momentum, Smart Fare, rideshare analytics, MBTI translator, habit tracker">
+    <meta name="author" content="Calvin Warren">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dreaming Above Labs - Intelligent, Human-Centered Apps">
+    <meta property="og:description" content="Turning ideas into intelligent, human-centered apps. A creative studio exploring the intersection of technology, psychology, and design.">
+    <meta property="og:site_name" content="Dreaming Above Labs">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dreaming Above Labs - Intelligent, Human-Centered Apps">
+    <meta name="twitter:description" content="Turning ideas into intelligent, human-centered apps. A creative studio exploring the intersection of technology, psychology, and design.">
+    
+    <title>Dreaming Above Labs - Intelligent, Human-Centered Apps</title>
+    
+    <!-- Performance: Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Performance: Use font-display: swap for faster rendering -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Dreaming Above Labs",
+      "description": "Turning ideas into intelligent, human-centered apps",
+      "founder": {
+        "@type": "Person",
+        "name": "Calvin Warren"
+      },
+      "url": "https://dreamingabove.github.io",
+      "sameAs": [
+        "https://www.reddit.com/r/DreamingAboveLabs"
+      ]
+    }
+    </script>
     <style>
         /* CSS Variables for Dark/Light Mode */
         :root {
@@ -179,7 +214,8 @@
             }
         }
 
-        .app-card h2 {
+        .app-card h2,
+        .app-card h3 {
             font-size: 1.75rem;
             font-weight: 600;
             color: var(--text-primary-light);
@@ -188,9 +224,26 @@
             transition: color 0.5s ease;
         }
 
+        .app-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .app-card p {
+            color: var(--text-secondary-light);
+            margin-bottom: 16px;
+            line-height: 1.6;
+            transition: color 0.5s ease;
+        }
+
         @media (prefers-color-scheme: dark) {
-            .app-card h2 {
+            .app-card h2,
+            .app-card h3 {
                 color: var(--text-primary-dark);
+            }
+
+            .app-card p {
+                color: var(--text-secondary-dark);
             }
         }
 
@@ -251,6 +304,117 @@
             }
         }
 
+        /* Content Sections */
+        section {
+            margin-bottom: 60px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        section:last-of-type {
+            margin-bottom: 40px;
+        }
+
+        .intro-section,
+        .about-section,
+        .connect-section {
+            background: var(--bg-secondary-light);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-radius: 20px;
+            padding: 32px;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 8px 32px var(--shadow-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .intro-section,
+            .about-section,
+            .connect-section {
+                background: var(--bg-secondary-dark);
+                border-color: var(--border-dark);
+                box-shadow: 0 8px 32px var(--shadow-dark);
+            }
+        }
+
+        section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary-light);
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+            transition: color 0.5s ease;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            section h2 {
+                color: var(--text-primary-dark);
+            }
+        }
+
+        section p {
+            color: var(--text-secondary-light);
+            margin-bottom: 16px;
+            line-height: 1.7;
+            transition: color 0.5s ease;
+        }
+
+        section p:last-child {
+            margin-bottom: 0;
+        }
+
+        section strong {
+            color: var(--text-primary-light);
+            font-weight: 600;
+            transition: color 0.5s ease;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            section p {
+                color: var(--text-secondary-dark);
+            }
+
+            section strong {
+                color: var(--text-primary-dark);
+            }
+        }
+
+        .connect-links {
+            list-style: none;
+            padding: 0;
+            margin-top: 16px;
+        }
+
+        .connect-links li {
+            margin-bottom: 12px;
+            color: var(--text-secondary-light);
+            transition: color 0.5s ease;
+        }
+
+        .connect-links li:last-child {
+            margin-bottom: 0;
+        }
+
+        .connect-links strong {
+            color: var(--text-primary-light);
+            margin-right: 8px;
+            transition: color 0.5s ease;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .connect-links li {
+                color: var(--text-secondary-dark);
+            }
+
+            .connect-links strong {
+                color: var(--text-primary-dark);
+            }
+        }
+
+        .projects-section {
+            margin-bottom: 60px;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -301,8 +465,23 @@
                 padding: 24px;
             }
 
-            .app-card h2 {
+            .app-card h2,
+            .app-card h3 {
                 font-size: 1.5rem;
+            }
+
+            section {
+                margin-bottom: 40px;
+            }
+
+            section h2 {
+                font-size: 1.75rem;
+            }
+
+            .intro-section,
+            .about-section,
+            .connect-section {
+                padding: 24px;
             }
         }
 
@@ -318,39 +497,92 @@
             .app-card {
                 padding: 20px;
             }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            .intro-section,
+            .about-section,
+            .connect-section {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Welcome to Dreaming Above Labs!</h1>
-            <p class="subtitle">Information and support resources for my applications</p>
+            <h1>Dreaming Above Labs</h1>
+            <p class="subtitle">Turning ideas into intelligent, human-centered apps.</p>
         </header>
 
-        <main class="cards-container">
-            <article class="app-card">
-                <h2>TypeTalk</h2>
-                <ul>
-                    <li><a href="typetalk_privacy_policy.html">Privacy Policy</a></li>
-                    <li><a href="typetalk_terms_of_service.html">Terms of Service</a></li>
-                    <li><a href="typetalk_support.html">Contact Support</a></li>
-                </ul>
-            </article>
+        <main>
+            <!-- Introduction Section -->
+            <section class="intro-section">
+                <p>Dreaming Above Labs is the creative studio of <strong>Calvin Warren</strong> — a solo developer exploring the intersection of technology, psychology, and design.</p>
+                <p>From journaling tools that help you reflect, to analytics apps that empower everyday work, each project is built with care, purpose, and a touch of wonder.</p>
+                <p>Here, you'll find Calvin's ongoing projects, experiments, and product launches — all connected by a shared goal: <strong>to build meaningful tools that make life simpler, smarter, and more inspired.</strong></p>
+            </section>
 
-            <article class="app-card">
-                <h2>Revealed+</h2>
-                <ul>
-                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
-                    <li><a href="terms_of_service.html">Terms of Service</a></li>
-                    <li><a href="support.html">Contact Support</a></li>
+            <!-- Current Projects Section -->
+            <section class="projects-section">
+                <h2>🧭 Current Projects</h2>
+                <div class="cards-container">
+                    <article class="app-card">
+                        <h3>Revealed+</h3>
+                        <p>The ultimate rideshare analytics app that turns trip screenshots into performance insights.</p>
+                        <ul>
+                            <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                            <li><a href="terms_of_service.html">Terms of Service</a></li>
+                            <li><a href="support.html">Contact Support</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="app-card">
+                        <h3>TypeTalk</h3>
+                        <p>An MBTI-powered translator that helps people communicate across personality types.</p>
+                        <ul>
+                            <li><a href="typetalk_privacy_policy.html">Privacy Policy</a></li>
+                            <li><a href="typetalk_terms_of_service.html">Terms of Service</a></li>
+                            <li><a href="typetalk_support.html">Contact Support</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="app-card">
+                        <h3>Momentum</h3>
+                        <p>A habit and reflection tracker that blends physical, mental, and spiritual growth.</p>
+                    </article>
+
+                    <article class="app-card">
+                        <h3>Smart Fare</h3>
+                        <p>An iOS shortcut for Uber drivers that automatically calculates pay-per-mile and hourly rates.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- About Calvin Section -->
+            <section class="about-section">
+                <h2>✨ About Calvin</h2>
+                <p>Calvin is an independent app developer, designer, and writer building tools under the brand Dreaming Above.</p>
+                <p>His work blends technical precision with emotional intelligence — aiming to create digital products that feel both smart and human.</p>
+                <p>When he's not coding or designing, he's exploring creative writing, sound, and spiritual reflection.</p>
+            </section>
+
+            <!-- Stay Connected Section -->
+            <section class="connect-section">
+                <h2>📬 Stay Connected</h2>
+                <p>Follow updates, beta releases, and behind-the-scenes progress:</p>
+                <ul class="connect-links">
+                    <li><strong>Reddit:</strong> <a href="https://www.reddit.com/r/DreamingAboveLabs" target="_blank" rel="noopener noreferrer">r/DreamingAboveLabs</a></li>
+                    <li><strong>Email:</strong> <a href="mailto:support@dreamingabovelabs.com">support@dreamingabovelabs.com</a></li>
                 </ul>
-            </article>
+            </section>
         </main>
 
         <footer>
-            <p class="last-updated">Last Updated: October 12, 2025</p>
-            <p class="copyright">&copy; 2025 All rights reserved.</p>
+            <p class="last-updated">Last Updated: January 2025</p>
+            <p class="copyright">&copy; 2025 Dreaming Above Labs. All rights reserved.</p>
         </footer>
     </div>
 </body>
