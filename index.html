@@ -318,6 +318,31 @@
             width: 100%;
         }
 
+        /* App Store Badge Styles */
+        .app-store-badge-container {
+            margin-bottom: 16px;
+        }
+
+        .app-store-badge-link {
+            display: inline-block;
+            text-decoration: none;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .app-store-badge-link:hover {
+            transform: scale(1.05);
+        }
+
+        .app-store-badge-link::after {
+            display: none;
+        }
+
+        .app-store-badge {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
         @media (prefers-color-scheme: dark) {
             .app-card a {
                 color: var(--accent-dark);
@@ -504,6 +529,10 @@
                 border-radius: 16px;
             }
 
+            .app-store-badge {
+                height: 35px;
+            }
+
             section {
                 margin-bottom: 40px;
             }
@@ -536,6 +565,10 @@
                 width: 60px;
                 height: 60px;
                 border-radius: 14px;
+            }
+
+            .app-store-badge {
+                height: 32px;
             }
 
             section h2 {
@@ -576,6 +609,11 @@
                         <h3>Revealed+</h3>
                         <p>The ultimate rideshare analytics app that turns trip screenshots into performance insights.</p>
                         <ul>
+                            <li class="app-store-badge-container">
+                                <a href="https://apps.apple.com/us/app/revealed-rideshare-analytics/id6743354980" target="_blank" rel="noopener noreferrer" class="app-store-badge-link">
+                                    <img src="images/App_Store_Badge.svg" alt="Download Revealed+ on the App Store" class="app-store-badge">
+                                </a>
+                            </li>
                             <li><a href="privacy_policy.html">Privacy Policy</a></li>
                             <li><a href="terms_of_service.html">Terms of Service</a></li>
                             <li><a href="support.html">Contact Support</a></li>
@@ -589,6 +627,11 @@
                         <h3>TypeTalk</h3>
                         <p>An MBTI-powered translator that helps people communicate across personality types.</p>
                 <ul>
+                    <li class="app-store-badge-container">
+                        <a href="https://apps.apple.com/us/app/typetalk/id6753960770" target="_blank" rel="noopener noreferrer" class="app-store-badge-link">
+                            <img src="images/App_Store_Badge.svg" alt="Download TypeTalk on the App Store" class="app-store-badge">
+                        </a>
+                    </li>
                     <li><a href="typetalk_privacy_policy.html">Privacy Policy</a></li>
                     <li><a href="typetalk_terms_of_service.html">Terms of Service</a></li>
                     <li><a href="typetalk_support.html">Contact Support</a></li>
