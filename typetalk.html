@@ -279,11 +279,19 @@
 
         .screenshot-placeholder img {
             width: 100%;
+            max-width: 100%;
             height: auto;
+            max-height: 500px;
             border-radius: 12px;
             margin-bottom: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             object-fit: contain;
+            display: block;
+        }
+        
+        .screenshot-placeholder img[src=""],
+        .screenshot-placeholder img:not([src]) {
+            display: none;
         }
 
         .screenshot-placeholder p {
@@ -579,23 +587,23 @@
             <p>See TypeTalk in action. Discover your MBTI type, translate messages, and learn communication styles.</p>
             <div class="screenshots-container">
                 <div class="screenshot-placeholder">
-                    <img src="images/typetalk-screenshot-1.png" alt="TypeTalk - Learn Your MBTI Type quiz interface" loading="lazy">
+                    <img src="images/typetalk-screenshot-1.png" alt="TypeTalk - Learn Your MBTI Type quiz interface" loading="lazy" onerror="this.style.display='none'; this.parentElement.querySelector('p').textContent='Image failed to load'">
                     <p>Discover Your Type</p>
                 </div>
                 <div class="screenshot-placeholder">
-                    <img src="images/typetalk-screenshot-2.png" alt="TypeTalk - Tune Your Tone translation interface" loading="lazy">
+                    <img src="images/typetalk-screenshot-2.png" alt="TypeTalk - Tune Your Tone translation interface" width="1242" height="2688" loading="eager" onerror="this.style.display='none'; this.parentElement.querySelector('p').textContent='Image failed to load'">
                     <p>Tune Your Tone</p>
                 </div>
                 <div class="screenshot-placeholder">
-                    <img src="images/typetalk-screenshot-3.png" alt="TypeTalk - Bridge the MBTI Gap translated message" loading="lazy">
+                    <img src="images/typetalk-screenshot-3.png" alt="TypeTalk - Bridge the MBTI Gap translated message" width="1242" height="2688" loading="eager" onerror="this.style.display='none'; this.parentElement.querySelector('p').textContent='Image failed to load'">
                     <p>Bridge the Gap</p>
                 </div>
                 <div class="screenshot-placeholder">
-                    <img src="images/typetalk-screenshot-4.png" alt="TypeTalk - Craft Perfect Messages translation result" loading="lazy">
+                    <img src="images/typetalk-screenshot-4.png" alt="TypeTalk - Craft Perfect Messages translation result" loading="lazy" onerror="this.style.display='none'; this.parentElement.querySelector('p').textContent='Image failed to load'">
                     <p>Craft Perfect Messages</p>
                 </div>
                 <div class="screenshot-placeholder">
-                    <img src="images/typetalk-screenshot-5.png" alt="TypeTalk - Discover Communication Styles personality types" loading="lazy">
+                    <img src="images/typetalk-screenshot-5.png" alt="TypeTalk - Discover Communication Styles personality types" loading="lazy" onerror="this.style.display='none'; this.parentElement.querySelector('p').textContent='Image failed to load'">
                     <p>Communication Styles</p>
                 </div>
             </div>
