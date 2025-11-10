@@ -253,7 +253,7 @@
         /* Screenshots Section */
         .screenshots-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 24px;
             margin-top: 24px;
         }
@@ -261,27 +261,36 @@
         .screenshot-placeholder {
             background: var(--card-bg-light);
             border-radius: var(--border-radius);
-            padding: 40px;
+            padding: 20px;
             text-align: center;
             box-shadow: var(--shadow-light);
             border: 1px solid rgba(90, 169, 230, 0.15);
-            min-height: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+        }
+
+        .screenshot-placeholder:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(90, 169, 230, 0.2);
         }
 
         .screenshot-placeholder img {
             width: 100%;
-            max-width: 200px;
-            border-radius: var(--border-radius);
-            margin-bottom: 16px;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            object-fit: contain;
         }
 
         .screenshot-placeholder p {
-            color: var(--text-secondary-light);
+            color: var(--text-primary-light);
             font-size: 0.9rem;
+            font-weight: 500;
+            margin: 0;
         }
 
         /* CTA Section */
@@ -412,8 +421,12 @@
                 border: 1px solid rgba(90, 169, 230, 0.25);
             }
 
+            .screenshot-placeholder:hover {
+                box-shadow: 0 8px 30px rgba(90, 169, 230, 0.3);
+            }
+
             .screenshot-placeholder p {
-                color: var(--text-secondary-dark);
+                color: var(--text-primary-dark);
             }
 
             .cta-section h2 {
@@ -563,19 +576,27 @@
         <!-- Screenshots/Preview Section -->
         <section class="card">
             <h2>App Preview</h2>
-            <p>See TypeTalk in action. Screenshots coming soon!</p>
+            <p>See TypeTalk in action. Discover your MBTI type, translate messages, and learn communication styles.</p>
             <div class="screenshots-container">
                 <div class="screenshot-placeholder">
-                    <img src="images/TypeTalk.png" alt="TypeTalk app preview">
-                    <p>App Screenshot</p>
+                    <img src="images/typetalk-screenshot-1.png" alt="TypeTalk - Learn Your MBTI Type quiz interface" loading="lazy">
+                    <p>Discover Your Type</p>
                 </div>
                 <div class="screenshot-placeholder">
-                    <img src="images/TypeTalk.png" alt="TypeTalk app preview">
-                    <p>App Screenshot</p>
+                    <img src="images/typetalk-screenshot-2.png" alt="TypeTalk - Tune Your Tone translation interface" loading="lazy">
+                    <p>Tune Your Tone</p>
                 </div>
                 <div class="screenshot-placeholder">
-                    <img src="images/TypeTalk.png" alt="TypeTalk app preview">
-                    <p>App Screenshot</p>
+                    <img src="images/typetalk-screenshot-3.png" alt="TypeTalk - Bridge the MBTI Gap translated message" loading="lazy">
+                    <p>Bridge the Gap</p>
+                </div>
+                <div class="screenshot-placeholder">
+                    <img src="images/typetalk-screenshot-4.png" alt="TypeTalk - Craft Perfect Messages translation result" loading="lazy">
+                    <p>Craft Perfect Messages</p>
+                </div>
+                <div class="screenshot-placeholder">
+                    <img src="images/typetalk-screenshot-5.png" alt="TypeTalk - Discover Communication Styles personality types" loading="lazy">
+                    <p>Communication Styles</p>
                 </div>
             </div>
         </section>
