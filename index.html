@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5JQXCE4WKS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5JQXCE4WKS');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; frame-src 'self' https://apps.apple.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
     <meta name="description" content="Dreaming Above Labs - Turning ideas into intelligent, human-centered apps. Explore Calvin Warren's creative studio building meaningful tools that make life simpler, smarter, and more inspired.">
     <meta name="keywords" content="Dreaming Above Labs, Calvin Warren, app developer, iOS apps, Revealed+, TypeTalk, Momentum, Seat Check, DownPath, Somnia Dreams, rideshare analytics, MBTI translator, habit tracker, EV navigation, dream journaling">
     <meta name="author" content="Calvin Warren">
@@ -24,7 +40,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Performance: Use font-display: swap for faster rendering -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Note: SRI for Google Fonts is limited due to dynamic content serving -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
     
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -663,6 +680,9 @@
                         </div>
                         <h3>Momentum</h3>
                         <p>A habit and reflection tracker that blends physical, mental, and spiritual growth.</p>
+                        <ul>
+                            <li><a href="https://testflight.apple.com/join/UEh8UeZP" target="_blank" rel="noopener noreferrer">Join Beta on TestFlight</a></li>
+                        </ul>
                     </article>
 
                     <article class="app-card">
