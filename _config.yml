@@ -1,2 +1,3 @@
-permalink: pretty
+# Using folder structure for clean URLs
+# Each page is in its own folder with index.html
 
