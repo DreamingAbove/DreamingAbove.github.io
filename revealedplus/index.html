@@ -249,11 +249,11 @@
         /* Screenshots Section */
         .screenshots-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 24px;
             margin-top: 24px;
             width: 100%;
-            grid-auto-rows: auto;
+            grid-auto-rows: min-content;
         }
 
         .screenshot-placeholder {
@@ -265,7 +265,7 @@
             border: 1px solid rgba(93, 173, 226, 0.1);
             display: flex !important;
             flex-direction: column;
-            align-items: stretch;
+            align-items: center;
             justify-content: flex-start;
             overflow: visible;
             width: 100%;
@@ -273,6 +273,7 @@
             position: relative;
             visibility: visible !important;
             opacity: 1 !important;
+            height: auto;
         }
 
         .screenshot-placeholder img {
@@ -282,8 +283,10 @@
             border-radius: var(--border-radius);
             margin-bottom: 8px;
             object-fit: contain;
-            display: block;
+            display: block !important;
             flex-shrink: 0;
+            visibility: visible !important;
+            opacity: 1 !important;
         }
 
         .screenshot-placeholder p {
@@ -496,7 +499,7 @@
             }
 
             .screenshots-container {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
             
             .screenshot-placeholder img {
@@ -564,21 +567,21 @@
         <section class="card">
             <h2>App Preview</h2>
             <p>See Revealed+ in action.</p>
-            <div class="screenshots-container">
-                <div class="screenshot-placeholder">
-                    <img src="/images/revealedplus-screenshot-1.png" alt="Revealed+ app preview" loading="lazy">
+            <div class="screenshots-container" style="display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 24px !important; width: 100% !important; grid-auto-rows: auto !important;">
+                <div class="screenshot-placeholder" style="display: flex !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; min-width: 0 !important;">
+                    <img src="/images/revealedplus-screenshot-1.png" alt="Revealed+ app preview" style="display: block !important; width: 100% !important; height: auto !important; max-height: 600px !important; object-fit: contain !important;">
                     <p>App Screenshot</p>
                 </div>
-                <div class="screenshot-placeholder">
-                    <img src="/images/revealedplus-screenshot-2.png" alt="Revealed+ app preview" loading="lazy">
+                <div class="screenshot-placeholder" style="display: flex !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; min-width: 0 !important;">
+                    <img src="/images/revealedplus-screenshot-2.png" alt="Revealed+ app preview" style="display: block !important; width: 100% !important; height: auto !important; max-height: 600px !important; object-fit: contain !important;">
                     <p>App Screenshot</p>
                 </div>
-                <div class="screenshot-placeholder">
-                    <img src="/images/revealedplus-screenshot-3.png" alt="Revealed+ app preview" loading="lazy">
+                <div class="screenshot-placeholder" style="display: flex !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; min-width: 0 !important;">
+                    <img src="/images/revealedplus-screenshot-3.png" alt="Revealed+ app preview" style="display: block !important; width: 100% !important; height: auto !important; max-height: 600px !important; object-fit: contain !important;">
                     <p>App Screenshot</p>
                 </div>
-                <div class="screenshot-placeholder">
-                    <img src="/images/revealedplus-screenshot-4.png" alt="Revealed+ app preview" loading="lazy">
+                <div class="screenshot-placeholder" style="display: flex !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; min-width: 0 !important;">
+                    <img src="/images/revealedplus-screenshot-4.png" alt="Revealed+ app preview" style="display: block !important; width: 100% !important; height: auto !important; max-height: 600px !important; object-fit: contain !important;">
                     <p>App Screenshot</p>
                 </div>
             </div>
