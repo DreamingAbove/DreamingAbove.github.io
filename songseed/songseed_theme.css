@@ -335,11 +335,6 @@ button:focus-visible {
   font-size: inherit;
 }
 
-.hero .accent-panel {
-  margin-top: calc(var(--space-unit) * 3);
-  text-align: left;
-}
-
 .accent-panel strong {
   color: var(--text-primary);
 }
