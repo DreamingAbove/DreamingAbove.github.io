@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5JQXCE4WKS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5JQXCE4WKS');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; frame-src 'self' https://apps.apple.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+    <title>CatalystIQ Privacy Policy</title>
+    <meta name="description" content="How CatalystIQ collects, uses, and protects your information.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="../catalystiq_theme.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div class="site-wrap">
+        <header class="site-nav">
+            <div class="site-nav__brand"><a href="../index.html">CatalystIQ</a></div>
+            <nav class="site-nav__links" aria-label="Site">
+                <a href="../privacy/" aria-current="page">Privacy</a>
+                <a href="../terms/">Terms</a>
+                <a href="../support/">Support</a>
+            </nav>
+        </header>
+
+        <main id="main">
+            <header class="legal-header">
+                <h1>Privacy Policy</h1>
+                <p>How we handle information when you use CatalystIQ.</p>
+            </header>
+
+            <p class="legal-meta"><b>Last updated:</b> June 12, 2026</p>
+
+            <div class="legal-content">
+                <h2>Introduction</h2>
+                <p>This Privacy Policy describes how Dreaming Above Labs (“we,” “us,” or “our”) collects, uses, and shares information when you use the CatalystIQ mobile application (“App”) and when you visit our CatalystIQ web pages on GitHub Pages (the “Site”). By using the App or the Site, you agree to this policy.</p>
+
+                <h2>Information we collect</h2>
+
+                <h3>Information stored on your device</h3>
+                <p>Depending on how you use CatalystIQ, the App may store information locally on your device, such as:</p>
+                <ul>
+                    <li><b>Preferences and settings</b> (for example, notification options, analysis model choice, or UI state)</li>
+                    <li><b>Recent searches and ticker activity</b></li>
+                    <li><b>Cached analysis results</b> to improve performance and reduce repeat requests</li>
+                    <li><b>API keys you provide</b> on the free (bring-your-own-key) tier, stored in the App’s local storage on your device</li>
+                </ul>
+                <p>CatalystIQ does not require you to create an account. We do not collect email addresses, passwords, or Sign in with Apple credentials through the App.</p>
+
+                <h3>Content you submit for analysis</h3>
+                <p>When you analyze a ticker, the App collects and processes information needed to provide results, such as:</p>
+                <ul>
+                    <li><b>Ticker symbols and company identifiers</b> you search or select</li>
+                    <li><b>News articles and headlines</b> retrieved from third-party news providers</li>
+                    <li><b>SEC filing excerpts and metadata</b> retrieved from U.S. Securities and Exchange Commission (SEC) EDGAR sources</li>
+                    <li><b>Trade halt data</b> from public Nasdaq RSS feeds when you use halt-related features</li>
+                </ul>
+                <p>This information is used to generate CatalystIQ Scores, sentiment, catalyst types, insights, and related analysis output.</p>
+
+                <h3>Free tier (bring your own API keys)</h3>
+                <p>If you use CatalystIQ without a CatalystIQ Plus subscription, the App may send ticker symbols, news text, filing excerpts, and related analysis inputs <b>directly from your device</b> to third-party services using API keys you supply, including:</p>
+                <ul>
+                    <li><b>OpenAI</b> — to generate structured catalyst analysis</li>
+                    <li><b>Finnhub</b> — for company news, market news, and symbol search</li>
+                    <li><b>Marketaux</b> — for additional news coverage</li>
+                    <li><b>SEC EDGAR</b> — for company filings and ticker reference data (public SEC endpoints)</li>
+                    <li><b>Nasdaq</b> — for trade-halt RSS feeds (public endpoints)</li>
+                </ul>
+                <p>Those providers process data under their own privacy policies and your agreements with them. Your API keys remain on your device unless you remove them or uninstall the App.</p>
+
+                <h3>CatalystIQ Plus (managed tier)</h3>
+                <p>If you subscribe to CatalystIQ Plus, similar inputs (ticker symbols, news, filings, and analysis parameters) may be sent from your device to <b>our backend services</b> (Google Firebase Callable Functions), which proxy requests to OpenAI, Finnhub, Marketaux, Marketstack (for market context), and related providers on your behalf so you do not need to manage API keys.</p>
+                <p>We may also receive:</p>
+                <ul>
+                    <li><b>Subscription and entitlement information</b> from RevenueCat and Apple StoreKit (including transaction data needed to verify an active subscription)</li>
+                    <li><b>App Check tokens</b> when enabled, to help protect backend endpoints from abuse</li>
+                </ul>
+                <p>Plus tier usage may be subject to daily analysis limits shown in the App.</p>
+
+                <h3>Subscriptions and purchases</h3>
+                <p>Purchases are processed by Apple. We do not receive your full payment card number. RevenueCat helps us determine whether you have an active CatalystIQ Plus entitlement. Apple’s privacy practices apply to payment and subscription management.</p>
+
+                <h3>Notifications and background activity</h3>
+                <p>If you enable trade-halt alerts, CatalystIQ may schedule <b>local notifications</b> on your device when halts match your preferences. We do not operate a push-notification server for CatalystIQ. The App may use iOS background fetch to refresh trade-halt data; this does not upload your location or contacts.</p>
+
+                <h3>What we do not collect</h3>
+                <p>Based on the current App design, CatalystIQ does not request access to your camera, photo library, microphone, contacts, HealthKit, or precise location. The App does not include third-party advertising SDKs or dedicated crash/analytics SDKs (such as Firebase Analytics, Sentry, or Mixpanel) in the current build.</p>
+
+                <h3>This website (analytics)</h3>
+                <p>When you visit CatalystIQ pages on the Site, we may use third-party analytics (for example, Google Analytics via Google Tag Manager) similar to our other web pages, subject to the provider’s policies and your browser or device controls.</p>
+
+                <h2>How we use information</h2>
+                <p>We use information to:</p>
+                <ul>
+                    <li>Provide catalyst analysis, news retrieval, symbol search, trade-halt features, and related App functionality</li>
+                    <li>Operate CatalystIQ Plus managed services and enforce subscription entitlements and usage limits</li>
+                    <li>Process transactions and manage subscriptions through Apple and RevenueCat</li>
+                    <li>Respond to support requests and communicate about the App</li>
+                    <li>Monitor reliability, security, and performance; detect abuse; and comply with law</li>
+                </ul>
+
+                <h2>Third-party services</h2>
+                <p>The App and Site may rely on third parties, including OpenAI, Finnhub, Marketaux, Marketstack, the SEC, Nasdaq, Apple (StoreKit), RevenueCat, and Google Firebase (Core, Functions, and optional App Check). Each provider applies its own privacy policy. We encourage you to review their policies and the disclosures in the App.</p>
+
+                <h2>Sharing</h2>
+                <p>We do not sell your personal information. We may share information with service providers who process data on our behalf under appropriate safeguards, when required by law, or to protect our rights and users’ safety.</p>
+
+                <h2>Retention</h2>
+                <p>We retain information only as long as needed for the purposes described here, unless a longer period is required by law. Local data on your device remains until you delete it or remove the App, subject to your device backup behavior. Backend logs and proxied request data for Plus users are retained only as needed for operations, security, and legal compliance.</p>
+
+                <h2>Security</h2>
+                <p>We use reasonable administrative, technical, and organizational measures to protect information. No method of transmission or storage is completely secure; we cannot guarantee absolute security. You are responsible for safeguarding API keys you enter on the free tier.</p>
+
+                <h2>Your choices</h2>
+                <p>Depending on your region, you may have rights to access, correct, delete, or restrict certain processing of your information, or to object or port data. You can remove API keys and cached data by clearing App storage or uninstalling the App, manage notifications in iOS Settings, and manage subscriptions through your Apple ID account settings. Contact us using the email below for privacy requests.</p>
+
+                <h2>Children</h2>
+                <p>CatalystIQ is not directed at children under 13, and we do not knowingly collect personal information from children under 13. If you believe we have collected such information, contact us and we will take appropriate steps.</p>
+
+                <h2>International users</h2>
+                <p>If you use the App from outside the United States, your information may be processed in the United States or other countries where we or our providers operate, which may have different data protection laws than your country.</p>
+
+                <h2>Changes to this policy</h2>
+                <p>We may update this Privacy Policy from time to time. We will post the updated policy on the Site and update the “Last updated” date. Continued use of the App or Site after changes means you accept the revised policy.</p>
+
+                <h2>Contact</h2>
+                <p>Questions about this Privacy Policy or CatalystIQ data practices:</p>
+                <p><b>Email:</b> <a href="mailto:support@dreamingabovelabs.com">support@dreamingabovelabs.com</a></p>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="site-footer__links">
+                <a href="../privacy/">Privacy Policy</a>
+                <a href="../terms/">Terms of Service</a>
+                <a href="../support/">Support</a>
+                <a href="../index.html">Home</a>
+            </div>
+            <p>&copy; 2026 CatalystIQ. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
