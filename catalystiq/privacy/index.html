@@ -57,7 +57,7 @@
 
             <div class="legal-content">
                 <h2>Introduction</h2>
-                <p>This Privacy Policy describes how Dreaming Above Labs (“we,” “us,” or “our”) collects, uses, and shares information when you use the CatalystIQ mobile application (“App”) and when you visit our CatalystIQ web pages on GitHub Pages (the “Site”). By using the App or the Site, you agree to this policy.</p>
+                <p>This Privacy Policy describes how Dreaming Above Labs (“we,” “us,” or “our”) collects, uses, and shares information when you use the CatalystIQ mobile application (“App”) and when you visit our CatalystIQ web pages (the “Site”). By using the App or the Site, you agree to this policy.</p>
 
                 <h2>Information we collect</h2>
 
@@ -68,8 +68,13 @@
                     <li><b>Recent searches and ticker activity</b></li>
                     <li><b>Cached analysis results</b> to improve performance and reduce repeat requests</li>
                     <li><b>API keys you provide</b> on the free (bring-your-own-key) tier, stored in the App’s local storage on your device</li>
+                    <li><b>Alert watchlist symbols</b> and <b>Catalyst Scan theme subscriptions</b> when you use Plus alert features</li>
+                    <li><b>Onboarding state</b>, including whether you have used the free onboarding demo analysis</li>
                 </ul>
                 <p>CatalystIQ does not require you to create an account. We do not collect email addresses, passwords, or Sign in with Apple credentials through the App.</p>
+
+                <h3>Device identifiers</h3>
+                <p>The App may use a device identifier (such as <code>identifierForVendor</code>) to rate-limit the free onboarding demo, register Plus push-alert preferences with our backend, and associate alert delivery with your device. We do not use this identifier for cross-app advertising.</p>
 
                 <h3>Content you submit for analysis</h3>
                 <p>When you analyze a ticker, the App collects and processes information needed to provide results, such as:</p>
@@ -84,31 +89,42 @@
                 <h3>Free tier (bring your own API keys)</h3>
                 <p>If you use CatalystIQ without a CatalystIQ Plus subscription, the App may send ticker symbols, news text, filing excerpts, and related analysis inputs <b>directly from your device</b> to third-party services using API keys you supply, including:</p>
                 <ul>
-                    <li><b>OpenAI</b> — to generate structured catalyst analysis</li>
-                    <li><b>Finnhub</b> — for company news, market news, and symbol search</li>
-                    <li><b>Marketaux</b> — for additional news coverage</li>
+                    <li><b>OpenAI</b> — to generate structured catalyst analysis (required on the free tier)</li>
+                    <li><b>Finnhub</b> — for company news, market news, and symbol search (optional)</li>
+                    <li><b>Marketaux</b> — for additional news coverage (optional)</li>
+                    <li><b>Stock News API</b> — for additional news coverage (optional; subject to a 100-call-per-day limit enforced in the App on the free tier)</li>
+                    <li><b>FreeCryptoAPI</b> — for crypto symbol search and price context (optional)</li>
                     <li><b>SEC EDGAR</b> — for company filings and ticker reference data (public SEC endpoints)</li>
                     <li><b>Nasdaq</b> — for trade-halt RSS feeds (public endpoints)</li>
                 </ul>
                 <p>Those providers process data under their own privacy policies and your agreements with them. Your API keys remain on your device unless you remove them or uninstall the App.</p>
 
                 <h3>CatalystIQ Plus (managed tier)</h3>
-                <p>If you subscribe to CatalystIQ Plus, similar inputs (ticker symbols, news, filings, and analysis parameters) may be sent from your device to <b>our backend services</b> (Google Firebase Callable Functions), which proxy requests to OpenAI, Finnhub, Marketaux, Marketstack (for market context), and related providers on your behalf so you do not need to manage API keys.</p>
+                <p>If you subscribe to CatalystIQ Plus, similar inputs (ticker symbols, news, filings, and analysis parameters) may be sent from your device to <b>our backend services</b> (Google Firebase Callable Functions), which proxy requests to OpenAI, Finnhub, Marketaux, Stock News API, Marketstack (for market context), FreeCryptoAPI (where used for crypto context), and related providers on your behalf so you do not need to manage API keys.</p>
                 <p>We may also receive:</p>
                 <ul>
                     <li><b>Subscription and entitlement information</b> from RevenueCat and Apple StoreKit (including transaction data needed to verify an active subscription)</li>
+                    <li><b>Firebase Cloud Messaging (FCM) tokens</b> and alert preferences when you enable Plus push alerts (trade halts, breaking catalyst news, or Catalyst Scan hits)</li>
                     <li><b>App Check tokens</b> when enabled, to help protect backend endpoints from abuse</li>
                 </ul>
-                <p>Plus tier usage may be subject to daily analysis limits shown in the App.</p>
+                <p>Plus tier usage is subject to daily analysis limits shown in the App (currently up to 100 analyses per day).</p>
 
                 <h3>Subscriptions and purchases</h3>
                 <p>Purchases are processed by Apple. We do not receive your full payment card number. RevenueCat helps us determine whether you have an active CatalystIQ Plus entitlement. Apple’s privacy practices apply to payment and subscription management.</p>
 
                 <h3>Notifications and background activity</h3>
-                <p>If you enable trade-halt alerts, CatalystIQ may schedule <b>local notifications</b> on your device when halts match your preferences. We do not operate a push-notification server for CatalystIQ. The App may use iOS background fetch to refresh trade-halt data; this does not upload your location or contacts.</p>
+                <p>Alert behavior depends on your subscription tier:</p>
+                <ul>
+                    <li><b>Free tier:</b> If you enable trade-halt alerts, CatalystIQ may schedule <b>local notifications</b> on your device when halts match your preferences while the App polls Nasdaq’s public halt feed. The App may use iOS background fetch to refresh halt data.</li>
+                    <li><b>CatalystIQ Plus:</b> If you enable Plus alerts, we register your device with our backend using an FCM token and your alert preferences (for example, watchlist symbols, analyzed tickers, breaking news, or Catalyst Scan themes). Our servers may send <b>remote push notifications</b> for trade halts, breaking catalyst news, and Catalyst Scan hits—even when the App is closed.</li>
+                </ul>
+                <p>These features do not upload your location or contacts.</p>
+
+                <h3>App analytics (Firebase Analytics)</h3>
+                <p>We use Google Analytics (Firebase Analytics) to understand how the App is used, including app launches, onboarding completion, subscription events, and ticker analyses (<b>symbol only</b>). Google may receive device and app metadata, session information, and an app instance identifier. We may also log custom events such as analysis started or completed (with ticker symbol and tier), subscription purchase or restore, and onboarding demo completion. The Firebase SDK may automatically collect certain lifecycle events (such as first open and session start). We do not use analytics for cross-app advertising or sell personal data. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Google’s Firebase privacy information</a> for more detail.</p>
 
                 <h3>What we do not collect</h3>
-                <p>Based on the current App design, CatalystIQ does not request access to your camera, photo library, microphone, contacts, HealthKit, or precise location. The App does not include third-party advertising SDKs or dedicated crash/analytics SDKs (such as Firebase Analytics, Sentry, or Mixpanel) in the current build.</p>
+                <p>Based on the current App design, CatalystIQ does not request access to your camera, photo library, microphone, contacts, HealthKit, or precise location. The App does not include third-party advertising SDKs.</p>
 
                 <h3>This website (analytics)</h3>
                 <p>When you visit CatalystIQ pages on the Site, we may use third-party analytics (for example, Google Analytics via Google Tag Manager) similar to our other web pages, subject to the provider’s policies and your browser or device controls.</p>
@@ -116,15 +132,16 @@
                 <h2>How we use information</h2>
                 <p>We use information to:</p>
                 <ul>
-                    <li>Provide catalyst analysis, news retrieval, symbol search, trade-halt features, and related App functionality</li>
-                    <li>Operate CatalystIQ Plus managed services and enforce subscription entitlements and usage limits</li>
+                    <li>Provide catalyst analysis, news retrieval, symbol search, trade-halt features, Catalyst Scan, watchlist alerts, and related App functionality</li>
+                    <li>Operate CatalystIQ Plus managed services, deliver push alerts, and enforce subscription entitlements and usage limits</li>
                     <li>Process transactions and manage subscriptions through Apple and RevenueCat</li>
+                    <li>Understand product usage and improve the App through Firebase Analytics</li>
                     <li>Respond to support requests and communicate about the App</li>
                     <li>Monitor reliability, security, and performance; detect abuse; and comply with law</li>
                 </ul>
 
                 <h2>Third-party services</h2>
-                <p>The App and Site may rely on third parties, including OpenAI, Finnhub, Marketaux, Marketstack, the SEC, Nasdaq, Apple (StoreKit), RevenueCat, and Google Firebase (Core, Functions, and optional App Check). Each provider applies its own privacy policy. We encourage you to review their policies and the disclosures in the App.</p>
+                <p>The App and Site may rely on third parties, including OpenAI, Finnhub, Marketaux, Stock News API, FreeCryptoAPI, Marketstack, the SEC, Nasdaq, Apple (StoreKit), RevenueCat, and Google Firebase (Core, Analytics, Functions, Cloud Messaging, and optional App Check). Each provider applies its own privacy policy. We encourage you to review their policies and the disclosures in the App.</p>
 
                 <h2>Sharing</h2>
                 <p>We do not sell your personal information. We may share information with service providers who process data on our behalf under appropriate safeguards, when required by law, or to protect our rights and users’ safety.</p>

@@ -68,14 +68,24 @@
                 <p>The CatalystIQ Score is a 0–100 gauge of how likely today’s catalysts are to draw trader attention. It is paired with sentiment, catalyst type, insight, and a checklist of why traders may care. It is an analytical signal—not a buy or sell recommendation.</p>
 
                 <h3>What is the difference between the free tier and CatalystIQ Plus?</h3>
-                <p><b>Free tier:</b> You bring your own API keys for OpenAI, Finnhub, and Marketaux. Requests go directly from your device to those providers.</p>
-                <p><b>CatalystIQ Plus:</b> A subscription ($5.99/month or $29.99/year) that includes managed API access through our servers—no key setup—and up to 100 analyses per day, plus additional market context features.</p>
+                <p><b>Free tier (bring your own API keys):</b> You supply your own API keys. Analysis requests go directly from your device to providers such as OpenAI. There is no daily analysis cap imposed by CatalystIQ on the free tier (your API providers’ limits still apply).</p>
+                <p><b>CatalystIQ Plus:</b> A subscription ($5.99/month or $29.99/year) with managed API access through our servers—no key setup—up to <b>100 analyses per day</b>, plus Catalyst Scan, a dedicated Watchlist tab (up to 25 symbols), Marketstack market context, and reliable <b>push alerts</b> for trade halts, breaking catalyst news, and Catalyst Scan hits—even when the app is closed.</p>
 
                 <h3>Which API keys do I need for the free tier?</h3>
-                <p>You will need API keys from OpenAI, Finnhub, and Marketaux. Enter them in CatalystIQ Settings. You are responsible for your own accounts, billing, and usage limits with those providers. SEC filing and Nasdaq halt data use public endpoints and do not require keys from those services.</p>
+                <p><b>OpenAI</b> is required. <b>Finnhub</b>, <b>Marketaux</b>, <b>Stock News API</b> (optional; up to 100 fetches per day in the App), and <b>FreeCryptoAPI</b> (optional, for crypto) can be added in Settings. You are responsible for your own accounts, billing, and usage limits with those providers. SEC filing and Nasdaq halt data use public endpoints and do not require keys from those services.</p>
 
                 <h3>How do trade halt notifications work?</h3>
-                <p>CatalystIQ can monitor Nasdaq’s public trade-halt feed and send <b>local notifications</b> on your device when halts occur. Enable alerts in Settings and choose whether to notify for tickers you have analyzed or for all halted stocks. Notifications are scheduled on-device; CatalystIQ does not use a remote push server for halts.</p>
+                <p><b>Free tier:</b> CatalystIQ monitors Nasdaq’s public trade-halt feed and can send <b>local notifications</b> while the app is active. In Settings, choose whether to alert for tickers you have analyzed or for all halted stocks from today’s US/Eastern session.</p>
+                <p><b>CatalystIQ Plus:</b> Push alerts work even when the app is closed. You can include analyzed tickers, all halted stocks, and symbols on your <b>watchlist</b> (up to 25). Plus also supports breaking catalyst news alerts and Catalyst Scan theme alerts.</p>
+
+                <h3>What is Catalyst Scan?</h3>
+                <p>Catalyst Scan is a <b>CatalystIQ Plus</b> feature that helps you discover fresh headline-driven names from themes and the catalyst playbook. You can subscribe to up to <b>5 themes</b> for optional push alerts when a high-scoring catalyst hit appears.</p>
+
+                <h3>What is the Watchlist?</h3>
+                <p>The Watchlist is a <b>CatalystIQ Plus</b> tab where you can track up to <b>25 symbols</b>. The same list is used for halt and news push alerts when Plus alerts are enabled.</p>
+
+                <h3>What is the onboarding demo?</h3>
+                <p>During onboarding, you can run <b>one free server-side analysis</b> on the How It Works page—no API keys or subscription required—so you can see a real CatalystIQ Score before setting up keys or subscribing.</p>
 
                 <h3>How do I cancel my CatalystIQ Plus subscription?</h3>
                 <p>Subscriptions are managed by Apple. Open <b>Settings → Apple ID → Subscriptions</b> on your iPhone, select CatalystIQ Plus, and cancel. You can also use the subscription management / Customer Center options in the App where available. Cancellation stops future renewals; access continues until the end of the current billing period unless otherwise stated by Apple.</p>
