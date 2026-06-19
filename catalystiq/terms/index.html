@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+      (function () {
+        var path = location.pathname;
+        if (/\/index\.html$/i.test(path)) {
+          location.replace(path.replace(/\/index\.html$/i, '/') + location.search + location.hash);
+        }
+      })();
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5JQXCE4WKS"></script>
     <script>
@@ -23,11 +31,6 @@
     <meta name="description" content="Terms and conditions for using the CatalystIQ iOS app.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://dreamingabovelabs.com/catalystiq/terms/">
-    <script>
-      if (/\/index\.html$/i.test(location.pathname)) {
-        history.replaceState(null, '', location.pathname.replace(/\/index\.html$/i, '/') + location.search + location.hash);
-      }
-    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
