@@ -22,6 +22,12 @@
     <title>CatalystIQ — Find market-moving catalysts.</title>
     <meta name="description" content="CatalystIQ is AI-powered catalyst intelligence for active traders. Enter a ticker, read recent news and SEC filings, and get a CatalystIQ Score with a plain-English breakdown.">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dreamingabovelabs.com/catalystiq/">
+    <script>
+      if (/\/index\.html$/i.test(location.pathname)) {
+        history.replaceState(null, '', location.pathname.replace(/\/index\.html$/i, '/') + location.search + location.hash);
+      }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +39,7 @@
 
     <div class="site-wrap">
         <header class="site-nav">
-            <div class="site-nav__brand"><a href="index.html">CatalystIQ</a></div>
+            <div class="site-nav__brand"><a href="./">CatalystIQ</a></div>
             <nav class="site-nav__links" aria-label="Site">
                 <a href="privacy/">Privacy</a>
                 <a href="terms/">Terms</a>
@@ -109,7 +115,7 @@
                 <a href="privacy/">Privacy Policy</a>
                 <a href="terms/">Terms of Service</a>
                 <a href="support/">Support</a>
-                <a href="index.html">Home</a>
+                <a href="./">Home</a>
             </div>
             <p>&copy; 2026 CatalystIQ. All rights reserved.</p>
         </footer>
